@@ -27,11 +27,16 @@ class FlashingState extends MusicBeatState
 			"Hey, watch out!\n
 			This Mod contains some flashing lights!\n
 			Press ESCAPE to ignore this message.\n
-			You've been warned!",
+			You've been warned!\n
+			Ported By SoulBF10!",
 			32);
 		warnText.setFormat("VCR OSD Mono", 32, FlxColor.WHITE, CENTER);
 		warnText.screenCenter(Y);
 		add(warnText);
+
+    #if mobile
+    addVirtualPad(NONE, A);
+    #end
 	}
 
 	override function update(elapsed:Float)
